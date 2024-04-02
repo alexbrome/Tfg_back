@@ -1,0 +1,13 @@
+#PRIORIDAD ALTA
+Pantalla admin,cuando editamos una bike,es obligatorio cambiar de foto(no deberia ser obligatorio)
+En los distintos botones añadir un optional panel para confirmar o cancelar la accion
+Crear una pantalla principal para cuando se acceda desde fuera por primera vez 
+
+
+#PRIORIDAD MEDIA
+#En el archivo websecurityconfiguration,los permisos de los roles no funcionan,hay que poner permitAll en los metodos 
+
+
+
+#PRIORIDAD BAJA
+#Cambiar el formato de los registros de bicicletas(poner cards mas bonitas)

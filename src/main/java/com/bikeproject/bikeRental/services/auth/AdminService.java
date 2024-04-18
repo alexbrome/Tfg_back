@@ -13,7 +13,7 @@ import io.jsonwebtoken.io.IOException;
 public interface AdminService {
 
 	
-	
+	//CRUD
 	boolean postBike(BikeDto bikeDto)throws IOException;
 	
 	List<BikeDto> getAllBikes();
@@ -24,11 +24,15 @@ public interface AdminService {
 	
 	boolean updateBike(Long bikeId , BikeDto bikeDto);
 	
+	
+	//Listar booking
 	List<BookBikeDto> getBookings();
 	
-	
+	//Cambiar estatus 
 	Boolean changeBookingStatus(Long bookingId,String status);
 	
+	
+	//Busar bikes
 	BikeDtoListDto searchBike(SearchBikeDto searchBikeDto);
 	
 }

@@ -38,7 +38,8 @@ public class WebSecurityConfiguration {
 		         request
 				.requestMatchers("/api/admin/**").permitAll()//hasAnyAuthority(UserRole.ADMIN.name())
 				.requestMatchers("/api/auth/**").permitAll()
-				.requestMatchers("/api/customer/**").permitAll()//.hasAnyAuthority(UserRole.CUSTOMER.name())
+				.requestMatchers("/api/customer/**").permitAll()
+				.requestMatchers("api/member").permitAll()//.hasAnyAuthority(UserRole.CUSTOMER.name())
 				.anyRequest().authenticated())
 		.sessionManagement(manager->
 		manager.sessionCreationPolicy(SessionCreationPolicy.STATELESS))

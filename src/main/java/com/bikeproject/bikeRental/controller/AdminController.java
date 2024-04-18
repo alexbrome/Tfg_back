@@ -52,7 +52,6 @@ public class AdminController {
 	
 	@DeleteMapping("/bike/{id}")
 	public ResponseEntity<Long> deleteBike(@PathVariable Long id){
-		System.out.println("entra en delete del Rest controller");
 		adminService.deleteBike(id);
 		return new ResponseEntity<Long>(id,HttpStatus.ACCEPTED);   
 	}

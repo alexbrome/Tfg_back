@@ -36,29 +36,7 @@ public class CustomerServiceImpl implements CustomerService{
 		return bikeRepository.findAll().stream().map(Bike::getBikeDto).collect(Collectors.toList());
 	}
 
-//	@Override
-//	public boolean bookBike(BookBikeDto bookBikeDto) {
-//		Optional<Bike> optionalBike = bikeRepository.findById(bookBikeDto.getBikeId());
-//		Optional<User> optionalUser = userRepository.findById(bookBikeDto.getUserId());
-//		if(optionalBike.isPresent() && optionalUser.isPresent()) {
-//			Bike existingBike = optionalBike.get();
-//			BookBike bookBike = new BookBike();
-//			bookBike.setUser(optionalUser.get() );
-//			bookBike.setBike(existingBike);
-//			bookBike.setBookBikeStatus(BookBikeStatus.PENDIENTE);
-//			long difInMilliSeconds = bookBikeDto.getToDate().getTime() - bookBikeDto.getFromDate().getTime();
-//			long days = TimeUnit.MILLISECONDS.toDays(difInMilliSeconds);
-//			bookBike.setDays(days);
-//			String priceString = existingBike.getPrecio();
-//			int priceInt = Integer.parseInt(priceString);
-//			bookBike.setPrice(priceInt * days);
-//			bookBike.setFromDate((Date) bookBikeDto.getFromDate());
-//			bookBike.setToDate((Date) bookBikeDto.getToDate());
-//			bookBikeRepository.save(bookBike);
-//			return true;
-//		}
-//		return false;
-//	}
+
 
 	//Booka Bike
 	@Override

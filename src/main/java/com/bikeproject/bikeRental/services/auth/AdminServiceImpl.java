@@ -69,7 +69,6 @@ public class AdminServiceImpl implements AdminService{
 	//Borrar Bike por id
 	@Override
 	public void deleteBike(Long id) {
-		System.out.println("entra en el delete de adminServiceImpl");
 		bikeRepository.deleteById(id);						
 	}
 
@@ -79,9 +78,9 @@ public class AdminServiceImpl implements AdminService{
 		return optionalBike.map(Bike::getBikeDto).orElse(null);
 	}
 
-	@Override//modificar para que n sea obligatorio cambiar la imagen
+	@Override//modificar para que no sea obligatorio cambiar la imagen
 	public boolean updateBike(Long bikeId, BikeDto bikeDto) throws IOException{
-		System.out.println("entra en el serviceimplem");
+		
 		Optional<Bike> optionalbike = bikeRepository.findById(bikeId);
 		if(optionalbike.isPresent()) {
 			Bike existingBike = optionalbike.get();
@@ -112,6 +111,8 @@ public class AdminServiceImpl implements AdminService{
 		return bookBikeRepository.findAll().stream().map(BookBike::getBookBikeDto).collect(Collectors.toList());
 	}
 
+	
+	
 	@Override
 	public Boolean changeBookingStatus(Long bookingId, String status) {
 		Optional<BookBike> optionalBike = bookBikeRepository.findById(bookingId);

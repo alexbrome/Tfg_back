@@ -1,13 +1,15 @@
 #PRIORIDAD ALTA
+
 Pantalla admin,cuando editamos una bike,es obligatorio cambiar de foto(no deberia ser obligatorio)
-En los distintos botones añadir un optional panel para confirmar o cancelar la accion
-Crear una pantalla principal para cuando se acceda desde fuera por primera vez 
+Cuando damos en el boton de reservar bike si no elegimos fecha no se registra en bbdd pero el swal dice ke si
+Boton de cerrar sesion debe abrirse un cuadro de dialgo de estas seguro
+
 
 
 #PRIORIDAD MEDIA
-#En el archivo websecurityconfiguration,los permisos de los roles no funcionan,hay que poner permitAll en los metodos 
-
+#En el archivo websecurityconfiguration,los permisos de los roles no funcionan,hay que poner permitAll en los metodos(guardianes angular) 
+#Pantalla de contacto enviar mail con el mensaje(actualmente no hace nada)
 
 
 #PRIORIDAD BAJA
-#Cambiar el formato de los registros de bicicletas(poner cards mas bonitas)
+#Front: en e componente bookingBike el precio total con las fechas elegidas debe pasar al paypal.

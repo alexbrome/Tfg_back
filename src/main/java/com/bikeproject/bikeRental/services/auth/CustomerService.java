@@ -16,4 +16,6 @@ public interface CustomerService {
 	
 	List<BookBikeDto> getBookingsByUserId(Long userId);
 	
+	
+	
 }

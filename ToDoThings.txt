@@ -2,14 +2,19 @@
 
 Pantalla admin,cuando editamos una bike,es obligatorio cambiar de foto(no deberia ser obligatorio)
 Cuando damos en el boton de reservar bike si no elegimos fecha no se registra en bbdd pero el swal dice ke si
-Boton de cerrar sesion debe abrirse un cuadro de dialgo de estas seguro
-
+Arreglar el layout del footer
 
 
 #PRIORIDAD MEDIA
 #En el archivo websecurityconfiguration,los permisos de los roles no funcionan,hay que poner permitAll en los metodos(guardianes angular) 
 #Pantalla de contacto enviar mail con el mensaje(actualmente no hace nada)
-
+Añadir la busque de bikes en la pantalla de catalogo(del customer o/y del admin)
 
 #PRIORIDAD BAJA
-#Front: en e componente bookingBike el precio total con las fechas elegidas debe pasar al paypal.
+#Front: en e componente bookingBike el precio total con las fechas elegidas debe pasar al paypal.(mandar el el bikeDto un price:
+      const toDate = new Date(data.toDate);
+      const fromDate = new Date(data.fromDate);
+      const differenceInDays = Math.ceil((toDate.getTime() - fromDate.getTime()) / (1000 * 3600 * 24));
+      
+      // Asignar el precio al objeto bookBikeDto
+      const price = differenceInDays * this.bike.price; )

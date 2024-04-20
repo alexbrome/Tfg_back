@@ -7,5 +7,7 @@ public interface UserService {
 
 	UserDetailsService userDetailsService();
 	
+	String getEmailByUserId(Long id);
+	
 	
 }

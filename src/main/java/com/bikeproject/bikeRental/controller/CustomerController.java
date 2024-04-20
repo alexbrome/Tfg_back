@@ -1,6 +1,8 @@
 package com.bikeproject.bikeRental.controller;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.bikeproject.bikeRental.dto.BikeDto;
 import com.bikeproject.bikeRental.dto.BookBikeDto;
 import com.bikeproject.bikeRental.services.auth.CustomerService;
+import com.bikeproject.bikeRental.services.auth.UserServiceImpl;
 
 import lombok.RequiredArgsConstructor;
 
@@ -27,6 +30,8 @@ public class CustomerController {
 
 	
 	private final CustomerService customerService;
+	
+	private final UserServiceImpl us;
 	
 	@GetMapping("/bikes")
 	public ResponseEntity<List<BikeDto>> getAllBikes(){
@@ -55,6 +60,12 @@ public class CustomerController {
 		return ResponseEntity.ok(customerService.getBookingsByUserId(userId));
 	}
 	
-	
+	@GetMapping("/bike/bookings/email/{id}")
+	public ResponseEntity<Map<String, String>> getEmailByUserId(@PathVariable Long id) {
+	    String email = us.getEmailByUserId(id);
+	    Map<String, String> response = new HashMap<>();
+	    response.put("email", email);
+	    return ResponseEntity.ok(response);
+	}
 	
 }

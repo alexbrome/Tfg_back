@@ -6,6 +6,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+import com.bikeproject.bikeRental.entity.User;
 import com.bikeproject.bikeRental.repository.UserRepository;
 
 @Service
@@ -23,4 +24,10 @@ public class UserServiceImpl implements UserService {
             }
         };
     }
+
+	@Override
+	public String getEmailByUserId(Long id) {
+		User user=userRepository.findById(id).get();
+		return user.getEmail();
+	}
 }

@@ -22,12 +22,15 @@ public class MensajeContacto {
 	
 	private String mensaje;
 	
+	private Boolean contestado = false;
+	
 	public MensajeContactoDto getMensajeDto() {
 		MensajeContactoDto mensajeContacto = new MensajeContactoDto();
 		mensajeContacto.setEmail(email);
 		mensajeContacto.setId(id);
 		mensajeContacto.setMensaje(mensaje);
 		mensajeContacto.setNombre(nombre);
+		mensajeContacto.setContestado(contestado);
 		return mensajeContacto;
 	}
 	

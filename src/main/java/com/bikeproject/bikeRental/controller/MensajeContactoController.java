@@ -36,6 +36,14 @@ public class MensajeContactoController {
 	} 
 	
 	
+	@PostMapping("/contestado")
+	public ResponseEntity<?> cambiarContestado(@RequestBody Long mensajeId) {
+	    ms.cambiarContestado(mensajeId);
+	    return ResponseEntity.ok().build();
+	}
+	
+	
+	
 	}
 	
 

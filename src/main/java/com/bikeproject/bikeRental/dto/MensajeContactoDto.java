@@ -13,4 +13,6 @@ private Long id;
 	
 	private String mensaje;
 	
+	private Boolean contestado = false;
+	
 }

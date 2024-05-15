@@ -68,4 +68,9 @@ public class CustomerController {
 	    return ResponseEntity.ok(response);
 	}
 	
+	@GetMapping("/bike/bookings/bike/{bikeId}")
+	public ResponseEntity<List<BookBikeDto>> getBookingsByBikeId(@PathVariable Long bikeId){
+		return ResponseEntity.ok(customerService.getBookingsByBikeId(bikeId));
+	}
+	
 }

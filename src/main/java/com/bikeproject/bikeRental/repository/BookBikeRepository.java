@@ -5,11 +5,13 @@ import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import com.bikeproject.bikeRental.dto.BookBikeDto;
 import com.bikeproject.bikeRental.entity.BookBike;
 @Repository
 public interface BookBikeRepository extends JpaRepository<BookBike,Long>{
 
 	
 	List<BookBike> findAllByUserId(Long userId);
+	List<BookBike> findAllByBikeId(Long bikeId);
 	
 }

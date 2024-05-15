@@ -1,14 +1,13 @@
 #PRIORIDAD ALTA
 
-#Hacer responsive la app
-En el rol usuario implementar la pantalla eventos y carreras(Eventos:crear una cerrera mia con inscripcion) 
-Pantalla admin,cuando editamos una bike,es obligatorio cambiar de foto(no deberia ser obligatorio)
+En el formaulario de signup manejar errores,ahora mismo dice email ya existe cuando no escribo nada
 Cuando damos en el boton de reservar bike si no elegimos fecha no se registra en bbdd pero el swal dice ke si
-Cambiar validaciones miembro
+
 
 #PRIORIDAD MEDIA
 #En el archivo websecurityconfiguration,los permisos de los roles no funcionan,hay que poner permitAll en los metodos(guardianes angular) 
-#Añadir la busqueda de bikes en la pantalla de catalogo(del customer o/y del admin)
+
+
 
 #PRIORIDAD BAJA
 #Front: en el componente bookingBike el precio total con las fechas elegidas debe pasar al paypal.(mandar el el bikeDto un price:

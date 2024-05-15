@@ -15,6 +15,7 @@ public interface CustomerService {
 	BikeDto getBikeById(Long idBike);
 	
 	List<BookBikeDto> getBookingsByUserId(Long userId);
+	public List<BookBikeDto> getBookingsByBikeId(Long bikeId) ;
 	
 	
 	

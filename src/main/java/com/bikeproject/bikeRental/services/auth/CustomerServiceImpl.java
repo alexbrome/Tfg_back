@@ -22,7 +22,7 @@ import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
-public class CustomerServiceImpl implements CustomerService{
+public class CustomerServiceImpl implements CustomerService {
 
 	private final BikeRepository bikeRepository;
 	
@@ -84,7 +84,13 @@ public class CustomerServiceImpl implements CustomerService{
 		return bookBikeRepository.findAllByUserId(userId).stream().map(BookBike::getBookBikeDto).collect(Collectors.toList()) ;
 	}
 
+   @Override
+	public List<BookBikeDto> getBookingsByBikeId(Long bikeId) {	
+	   System.out.println();
+		 return bookBikeRepository.findAllByBikeId(bikeId).stream().map(BookBike::getBookBikeDto).collect(Collectors.toList())  ;
+	}
 
+  
 
 	
 	
